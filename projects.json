@@ -1,10 +1,25 @@
 [
   {
     "id": 1,
-    "title": "T20 Scouting Analysis",
-    "short": "Comprehensive analysis tool for T20 player scouting and performance evaluation",
-    "long": "Developed a comprehensive scouting analysis system for T20 cricket that evaluates player performance across multiple dimensions including batting consistency, strike rates, bowling effectiveness, and fielding capabilities. The tool helps teams identify emerging talents and optimize squad selection.",
-    "tech": ["Python", "Data Analysis", "Cricket Analytics"],
+    "title": "Cricket Performance Analytics Dashboard (Tableau)",
+    "short": "Interactive Tableau dashboard analyzing 1000+ T20 match records",
+    "long": "Built an interactive Tableau dashboard analyzing 1000+ T20 match records sourced from Kaggle. Performed data cleaning and preprocessing using Python and Excel to improve dataset consistency by 25%. Developed performance KPIs including Runs, Strike Rate, Boundary %, Economy Rate, and Phase-wise Contribution. Enabled comparative player performance evaluation and match trend identification using dynamic filters.",
+    "tech": ["Tableau", "Python", "Excel", "Data Cleaning"],
+    "screenshots": [
+      "assets/Performance dashboard/1 Overview Dashboard.jpg",
+      "assets/Performance dashboard/2 Player Stats.jpg"
+    ],
+    "screenshotCaptions": [
+      "Interactive Dashboard Overview",
+      "Detailed Player Statistics"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Player Scouting & Performance Benchmarking Model – T20 Format",
+    "short": "Multi-metric player ranking model for T20 cricket",
+    "long": "Designed a multi-metric player ranking model using Strike Rate, Boundary %, Dot Ball %, Economy Rate, and Consistency Index. Built role-based benchmarking frameworks for Top-order Batters, Finishers, and Death-over Bowlers. Conducted phase-wise segmentation (Powerplay, Middle Overs, Death Overs) to assess situational efficiency.",
+    "tech": ["Performance Modeling", "Benchmarking", "Data Analysis", "Excel"],
     "screenshots": [
       "assets/Scouting analysis/1 Bat_Ave vs SR.jpg",
       "assets/Scouting analysis/2 Comparison Chart.jpg"
@@ -15,11 +30,11 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Win Prediction Model",
-    "short": "Machine learning model to predict T20 match outcomes",
-    "long": "Built a predictive model using machine learning algorithms to forecast T20 match outcomes based on team composition, historical performance, and match conditions. The model achieves high accuracy in predicting winners and provides insights into key performance indicators that influence match results.",
-    "tech": ["Python", "Machine Learning", "Data Science"],
+    "id": 3,
+    "title": "Cricket Win Probability Prediction",
+    "short": "Real-time win probability prediction model for T20 matches",
+    "long": "Developed a prediction model to calculate the real-time win percentage of teams during IPL matches based on historical ball-by-ball data. Engineered custom features such as wicket-fall flags and cumulative runs to improve model accuracy. Created dynamic visualizations to track win probability fluctuations throughout the duration of a match.",
+    "tech": ["Machine Learning", "Feature Engineering", "Visualization", "Python"],
     "screenshots": [
       "assets/Win prediction model/1 Model Performance.jpg",
       "assets/Win prediction model/2 Feature Importance.jpg"
@@ -27,21 +42,6 @@
     "screenshotCaptions": [
       "Model Performance Metrics",
       "Feature Importance Analysis"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Performance Dashboard",
-    "short": "Interactive visualization dashboard for cricket player performance",
-    "long": "Created an interactive dashboard that visualizes cricket player performance metrics across different formats and time periods. The dashboard provides real-time insights into player statistics, trends, and comparative analysis to support data-driven decision making.",
-    "tech": ["Data Visualization", "Dashboard Design", "Analytics"],
-    "screenshots": [
-      "assets/Performance dashboard/1 Overview Dashboard.jpg",
-      "assets/Performance dashboard/2 Player Stats.jpg"
-    ],
-    "screenshotCaptions": [
-      "Performance Dashboard Overview",
-      "Detailed Player Statistics"
     ]
   }
 ]
