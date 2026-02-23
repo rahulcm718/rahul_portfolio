@@ -72,6 +72,44 @@ html {
     color: var(--primary-color);
 }
 
+/* resume link/button styling */
+.nav-resume,
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-resume i,
+.resume-btn i {
+    font-size: 1.2rem;
+}
+
+.nav-resume {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+}
+
+.nav-resume:hover,
+.resume-btn:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: #007bff;
+}
+
+.resume-btn {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.resume-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
