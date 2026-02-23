@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project — Rahul CM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">Rahul CM</div>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">Back to Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="padding:40px 20px;">
+    <a href="index.html" class="btn btn-secondary" style="margin-bottom:20px;">← Back to portfolio</a>
+    <h2 id="proj-title">Loading…</h2>
+    <p id="proj-tech" class="modal-tech"></p>
+    <div id="proj-main-image-wrap">
+      <img id="proj-main-image" class="modal-image" src="" alt="" />
+      <p id="proj-image-caption" class="modal-caption"></p>
+    </div>
+
+    <div id="proj-thumbs" class="modal-thumbnails" style="margin-top:14px;"></div>
+
+    <section style="margin-top:18px;">
+      <h3>Description</h3>
+      <p id="proj-desc" class="modal-desc"></p>
+    </section>
+
+    <section style="margin-top:18px;">
+      <h3>Technologies</h3>
+      <div id="proj-tech-list" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;"></div>
+    </section>
+  </main>
+
+  <script>
+    // parse ?id= from URL
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    async function loadProject(id) {
+      try {
+        const res = await fetch('/api/projects');
+        if (!res.ok) throw new Error('Failed to load projects');
+        const projects = await res.json();
+        const proj = projects.find(p => String(p.id) === String(id));
+        if (!proj) {
+          document.getElementById('proj-title').textContent = 'Project not found';
+          return;
+        }
+
+        document.title = proj.title + ' — Rahul CM';
+        document.getElementById('proj-title').textContent = proj.title;
+        document.getElementById('proj-tech').textContent = proj.tech ? proj.tech.join(' • ') : '';
+        document.getElementById('proj-desc').textContent = proj.long || proj.short || '';
+
+        const mainImg = document.getElementById('proj-main-image');
+        const caption = document.getElementById('proj-image-caption');
+        const thumbs = document.getElementById('proj-thumbs');
+        const techList = document.getElementById('proj-tech-list');
+
+        if (proj.screenshots && proj.screenshots.length) {
+          mainImg.src = encodeURI(proj.screenshots[0]);
+          mainImg.alt = proj.title;
+          caption.textContent = proj.screenshotCaptions && proj.screenshotCaptions[0] ? proj.screenshotCaptions[0] : '';
+
+          proj.screenshots.forEach((s, idx) => {
+            const t = document.createElement('img');
+            t.className = 'modal-thumb';
+            t.src = encodeURI(s);
+            t.alt = proj.title + ' ' + (idx+1);
+            t.addEventListener('click', () => {
+              mainImg.src = encodeURI(s);
+              caption.textContent = (proj.screenshotCaptions && proj.screenshotCaptions[idx]) ? proj.screenshotCaptions[idx] : '';
+              Array.from(thumbs.children).forEach(c => c.classList.remove('active'));
+              t.classList.add('active');
+            });
+            if (idx === 0) t.classList.add('active');
+            thumbs.appendChild(t);
+          });
+        } else {
+          mainImg.style.display = 'none';
+        }
+
+        if (proj.tech && proj.tech.length) {
+          proj.tech.forEach(t => {
+            const el = document.createElement('span');
+            el.className = 'skill-tag';
+            el.textContent = t;
+            techList.appendChild(el);
+          });
+        }
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('proj-title').textContent = 'Failed to load project';
+      }
+    }
+
+    const id = getQueryParam('id');
+    if (id) loadProject(id);
+    else document.getElementById('proj-title').textContent = 'No project specified';
+  </script>
+</body>
+</html>

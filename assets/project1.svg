@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+  <text x="50%" y="45%" font-family="Segoe UI, Arial" font-size="36" fill="#38bdf8" text-anchor="middle">Cricket Performance Analytics Dashboard</text>
+  <text x="50%" y="55%" font-family="Segoe UI, Arial" font-size="20" fill="#cbd5e1" text-anchor="middle">Tableau dashboard • 1000+ T20 matches • KPIs & filters</text>
+</svg>

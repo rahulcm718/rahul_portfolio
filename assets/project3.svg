@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700">
+  <rect width="100%" height="100%" fill="#0b2230" />
+  <text x="50%" y="45%" font-family="Segoe UI, Arial" font-size="36" fill="#38bdf8" text-anchor="middle">Cricket Win Probability Prediction</text>
+  <text x="50%" y="55%" font-family="Segoe UI, Arial" font-size="20" fill="#cbd5e1" text-anchor="middle">Real-time win % • Feature engineering • Dynamic visualizations</text>
+</svg>
