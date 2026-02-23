@@ -6,12 +6,10 @@
     "long": "Built an interactive Tableau dashboard analyzing 1000+ T20 match records sourced from Kaggle. Performed data cleaning and preprocessing using Python and Excel to improve dataset consistency by 25%. Developed performance KPIs including Runs, Strike Rate, Boundary %, Economy Rate, and Phase-wise Contribution. Enabled comparative player performance evaluation and match trend identification using dynamic filters.",
     "tech": ["Tableau", "Python", "Excel", "Data Cleaning"],
     "screenshots": [
-      "assets/Performance dashboard/1 Overview Dashboard.jpg",
-      "assets/Performance dashboard/2 Player Stats.jpg"
+      "assets/Performance dashboard/Russell Stats (Assignment).jpeg"
     ],
     "screenshotCaptions": [
-      "Interactive Dashboard Overview",
-      "Detailed Player Statistics"
+      "Interactive Dashboard Overview"
     ]
   },
   {
@@ -21,8 +19,8 @@
     "long": "Designed a multi-metric player ranking model using Strike Rate, Boundary %, Dot Ball %, Economy Rate, and Consistency Index. Built role-based benchmarking frameworks for Top-order Batters, Finishers, and Death-over Bowlers. Conducted phase-wise segmentation (Powerplay, Middle Overs, Death Overs) to assess situational efficiency.",
     "tech": ["Performance Modeling", "Benchmarking", "Data Analysis", "Excel"],
     "screenshots": [
-      "assets/Scouting analysis/1 Bat_Ave vs SR.jpg",
-      "assets/Scouting analysis/2 Comparison Chart.jpg"
+      "assets/Scouting analysis/Screenshot 2026-02-23 090404.png",
+      "assets/Scouting analysis/Screenshot 2026-02-23 090510.png"
     ],
     "screenshotCaptions": [
       "Batting Average vs Strike Rate Analysis",
@@ -36,8 +34,8 @@
     "long": "Developed a prediction model to calculate the real-time win percentage of teams during IPL matches based on historical ball-by-ball data. Engineered custom features such as wicket-fall flags and cumulative runs to improve model accuracy. Created dynamic visualizations to track win probability fluctuations throughout the duration of a match.",
     "tech": ["Machine Learning", "Feature Engineering", "Visualization", "Python"],
     "screenshots": [
-      "assets/Win prediction model/1 Model Performance.jpg",
-      "assets/Win prediction model/2 Feature Importance.jpg"
+      "assets/Win prediction model/Screenshot 2026-02-23 091403.png",
+      "assets/Win prediction model/Screenshot 2026-02-23 091418.png"
     ],
     "screenshotCaptions": [
       "Model Performance Metrics",
