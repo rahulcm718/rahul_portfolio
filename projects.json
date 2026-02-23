@@ -35,7 +35,9 @@
     "tech": ["Machine Learning", "Feature Engineering", "Visualization", "Python"],
     "screenshots": [
       "assets/Win prediction model/Screenshot 2026-02-23 091403.png",
-      "assets/Win prediction model/Screenshot 2026-02-23 091418.png"
+      "assets/Win prediction model/Screenshot 2026-02-23 091418.png",
+      "assets/Win prediction model/Screenshot 2026-02-23 091431.png",
+      "assets/Win prediction model/Screenshot 2026-02-23 091445.png"
     ],
     "screenshotCaptions": [
       "Model Performance Metrics",
