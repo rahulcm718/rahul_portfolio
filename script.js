@@ -121,7 +121,7 @@ let PROJECTS = [];
 
 async function loadProjects() {
     try {
-        const res = await fetch('/api/projects');
+        const res = await fetch('/projects.json');
         if (res.ok) PROJECTS = await res.json();
     } catch (e) {
         console.error('Failed to load projects', e);
