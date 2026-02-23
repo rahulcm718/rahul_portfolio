@@ -48,7 +48,7 @@
 
     async function loadProject(id) {
       try {
-        const res = await fetch('/api/projects');
+        const res = await fetch('/projects.json');
         if (!res.ok) throw new Error('Failed to load projects');
         const projects = await res.json();
         const proj = projects.find(p => String(p.id) === String(id));
